@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://cm.charter.com/Enterprise/Order/V1"
+            xmlns:order="http://cm.charter.com/Enterprise/Order/V1"
+            elementFormDefault="qualified">
+
+  <xsd:element name="Order" type="order:OrderType"/>
+  <xsd:element name="OrderRequest" type="order:OrderRequestType"/>
+  <xsd:element name="OrderResponse" type="order:OrderResponseType"/>
+
+  <xsd:complexType name="OrderRequestType">
+     <xsd:sequence>
+        <xsd:element ref="order:Order"/>
+     </xsd:sequence>
+  </xsd:complexType>
+  
+    <xsd:complexType name="OrderResponseType">
+     <xsd:sequence>
+        <xsd:element name="Account" type="xsd:string"/>
+        <xsd:element name="Amount" type="xsd:string"/>
+     </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="OrderType">
+     <xsd:sequence>
+        <xsd:element name="Account" type="xsd:string"/>
+        <xsd:element name="Number" type="xsd:string"/>
+        <xsd:element name="Item" type="xsd:string"/>
+        <xsd:element name="Quantity" type="xsd:string"/>
+        <xsd:element name="Price" type="xsd:string"/>
+     </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

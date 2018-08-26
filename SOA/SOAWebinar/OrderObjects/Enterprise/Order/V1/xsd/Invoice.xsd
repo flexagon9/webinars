@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://cm.charter.com/Enterprise/Invoice/V1"
+            xmlns:inv="http://cm.charter.com/Enterprise/Invoice/V1"
+            elementFormDefault="qualified">
+
+  <xsd:element name="Invoice" type="inv:InvoiceType"/>
+  <xsd:element name="OrderRequest" type="inv:InvoiceRequestType"/>
+  <xsd:element name="OrderResponse" type="inv:InvoiceResponseType"/>
+
+  <xsd:complexType name="InvoiceRequestType">
+     <xsd:sequence>
+        <xsd:element name="Account" type="xsd:string"/>
+        <xsd:element name="Number" type="xsd:string"/>
+        <xsd:element name="Quantity" type="xsd:string"/>
+        <xsd:element name="Price" type="xsd:string"/>
+     </xsd:sequence>
+  </xsd:complexType>
+  
+    <xsd:complexType name="InvoiceResponseType">
+     <xsd:sequence>
+        <xsd:element name="Amount" type="xsd:string"/>
+     </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="InvoiceType">
+     <xsd:sequence>
+        <xsd:element name="Account" type="xsd:string"/>
+        <xsd:element name="Number" type="xsd:string"/>
+        <xsd:element name="Quantity" type="xsd:string"/>
+        <xsd:element name="Price" type="xsd:string"/>
+     </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
