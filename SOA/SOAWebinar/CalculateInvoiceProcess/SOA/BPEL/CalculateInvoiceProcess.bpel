@@ -72,7 +72,7 @@
     <receive name="receiveInput" partnerLink="calculateinvoiceprocess_client" portType="client:CalculateInvoiceProcess" operation="process" variable="inputVariable" createInstance="yes"/>
     <assign name="calculateInvoice">
       <copy>
-        <from>$inputVariable.payload/ns1:Quantity * </from>
+        <from>$inputVariable.payload/ns1:Quantity * $inputVariable.payload/ns1:Price</from>
         <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/ns1:Amount</to>
       </copy>
     </assign>

@@ -1,13 +1,2 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Faults>
-   <Fault>
-      <severity>error</severity>
-      <loc>/*[namespace-uri()='http://docs.oasis-open.org/wsbpel/2.0/process/executable'][local-name()='process']/*[namespace-uri()='http://docs.oasis-open.org/wsbpel/2.0/process/executable'][local-name()='sequence'][@name='main']/*[namespace-uri()='http://docs.oasis-open.org/wsbpel/2.0/process/executable'][local-name()='assign'][@name='calculateInvoice']/*[namespace-uri()='http://docs.oasis-open.org/wsbpel/2.0/process/executable'][local-name()='copy']/*[namespace-uri()='http://docs.oasis-open.org/wsbpel/2.0/process/executable'][local-name()='from']</loc>
-      <line>75</line>
-      <col/>
-      <file>BPEL/CalculateInvoiceProcess.bpel</file>
-      <name>BPEL/CalculateInvoiceProcess.bpel</name>
-      <fix>Check expression syntax on &lt;bpel:from>.</fix>
-      <msg>The expression "$inputVariable.payload/ns1:Quantity *" has invalid syntax - Unexpected ''</msg>
-   </Fault>
-</Faults>
+<Faults/>
