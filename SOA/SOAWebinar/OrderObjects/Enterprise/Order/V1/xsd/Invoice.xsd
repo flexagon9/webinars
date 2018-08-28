@@ -5,8 +5,8 @@
             elementFormDefault="qualified">
 
   <xsd:element name="Invoice" type="inv:InvoiceType"/>
-  <xsd:element name="OrderRequest" type="inv:InvoiceRequestType"/>
-  <xsd:element name="OrderResponse" type="inv:InvoiceResponseType"/>
+  <xsd:element name="InvoiceRequest" type="inv:InvoiceRequestType"/>
+  <xsd:element name="InvoiceResponse" type="inv:InvoiceResponseType"/>
 
   <xsd:complexType name="InvoiceRequestType">
      <xsd:sequence>
