@@ -1,0 +1,94 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Oracle JDeveloper BPEL Designer 
+  
+  Created: Tue Aug 28 20:17:29 CDT 2018
+  Author:  Dan Reynebeau
+  Type: BPEL 2.0 Process
+  Purpose: Synchronous BPEL Process
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+<process name="ValidateOrderProcess"
+               targetNamespace="http://xmlns.oracle.com/Test1221App/ValidateOrderProcess/ValidateOrderProcess"
+               xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+               xmlns:client="http://xmlns.oracle.com/Test1221App/ValidateOrderProcess/ValidateOrderProcess"
+               xmlns:ora="http://schemas.oracle.com/xpath/extension"
+               xmlns:ui="http://xmlns.oracle.com/soa/designer"
+               xmlns:bpelx="http://schemas.oracle.com/bpel/extension"
+         xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+         xmlns:ns1="http://xmlns.oracle.com/Test1221App/CalculateInvoiceProcess/CalculateInvoiceProcess"
+         xmlns:ns2="http://cm.charter.com/Enterprise/Order/V1" xmlns:ns3="http://cm.charter.com/Enterprise/Invoice/V1">
+
+    <import ui:processWSDL="true" namespace="http://xmlns.oracle.com/Test1221App/ValidateOrderProcess/ValidateOrderProcess" location="../WSDLs/ValidateOrderProcess.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        PARTNERLINKS                                                      
+        List of services participating in this BPEL process               
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    --> 
+  <partnerLinks>
+    <!-- 
+      The 'client' role represents the requester of this service. It is 
+      used for callback. The location and correlation information associated
+      with the client role are automatically set using WS-Addressing.
+    -->
+    <partnerLink name="validateorderprocess_client" partnerLinkType="client:ValidateOrderProcess" myRole="ValidateOrderProcessProvider"/>
+    <partnerLink name="CalculateInvoiceProcess" partnerLinkType="ns1:CalculateInvoiceProcess"
+                 partnerRole="CalculateInvoiceProcessProvider"/>
+  </partnerLinks>
+
+  <!-- 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      VARIABLES                                                        
+      List of messages and XML documents used within this BPEL process 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  -->
+  <variables>
+    <!-- Reference to the message passed as input during initiation -->
+    <variable name="inputVariable" messageType="client:ValidateOrderProcessRequestMessage"/>
+
+    <!-- Reference to the message that will be returned to the requester-->
+    <variable name="outputVariable" messageType="client:ValidateOrderProcessResponseMessage"/>
+    <variable name="invokeCalcInvoice_process_InputVariable" messageType="ns1:CalculateInvoiceProcessRequestMessage"/>
+    <variable name="invokeCalcInvoice_process_OutputVariable" messageType="ns1:CalculateInvoiceProcessResponseMessage"/>
+  </variables>
+
+  <!-- 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     ORCHESTRATION LOGIC                                               
+     Set of activities coordinating the flow of messages across the    
+     services integrated within this business process                  
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  -->
+  <sequence name="main">
+
+    <!-- Receive input from requestor. (Note: This maps to operation defined in ValidateOrderProcess.wsdl) -->
+    <receive name="receiveInput" partnerLink="validateorderprocess_client" portType="client:ValidateOrderProcess" operation="process" variable="inputVariable" createInstance="yes"/>
+    <assign name="xformOrderData_to_InvoiceData">
+      <bpelx:annotation>
+        <bpelx:pattern patternName="bpelx:transformation"></bpelx:pattern>
+      </bpelx:annotation>
+      <copy>
+        <from>ora:doXSLTransformForDoc("../Transformations/xformOrderData_to_InvoiceData.xsl", $inputVariable.payload)</from>
+        <to variable="invokeCalcInvoice_process_InputVariable" part="payload"/>
+      </copy>
+    </assign>
+    <invoke name="invokeCalcInvoice" bpelx:invokeAsDetail="no" partnerLink="CalculateInvoiceProcess"
+            portType="ns1:CalculateInvoiceProcess" operation="process"
+            inputVariable="invokeCalcInvoice_process_InputVariable"
+            outputVariable="invokeCalcInvoice_process_OutputVariable"/>
+    <assign name="asgnResponse">
+      <copy>
+        <from>$inputVariable.payload/ns2:Order/ns2:Account</from>
+        <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/ns2:Account</to>
+      </copy>
+      <copy>
+        <from>$invokeCalcInvoice_process_OutputVariable.payload/ns3:Amount</from>
+        <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/ns2:Amount</to>
+      </copy>
+    </assign>
+    <!-- Generate reply to synchronous request -->
+    <reply name="replyOutput" partnerLink="validateorderprocess_client" portType="client:ValidateOrderProcess" operation="process" variable="outputVariable"/>
+  </sequence>
+</process>
