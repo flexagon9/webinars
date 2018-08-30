@@ -8,7 +8,7 @@
   Type: BPEL 2.0 Process
   Purpose: Synchronous BPEL Process
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
--->
+-->  
 <process name="CalculateInvoiceProcess"
                targetNamespace="http://xmlns.oracle.com/Test1221App/CalculateInvoiceProcess/CalculateInvoiceProcess"
                xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
