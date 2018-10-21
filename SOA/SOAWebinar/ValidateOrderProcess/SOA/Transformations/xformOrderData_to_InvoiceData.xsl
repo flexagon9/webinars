@@ -32,7 +32,9 @@
          <tns:Quantity>
             <xsl:value-of select="/ns0:OrderRequest/ns0:Order/ns0:Quantity"/>
          </tns:Quantity>
-         <tns:Price>0</tns:Price>
+         <tns:Price>
+		    <xsl:value-of select="/ns0:OrderRequest/ns0:Order/ns0:Price"/>
+		 </tns:Price>
       </tns:InvoiceRequest>
    </xsl:template>
 </xsl:stylesheet>
