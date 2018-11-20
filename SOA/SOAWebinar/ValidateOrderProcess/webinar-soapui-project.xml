@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4aef9bd5-2edf-4e26-bbaf-627dd8d3731f" activeEnvironment="Default" name="webinar" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="TestSuite 1"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="TestCase 1"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="9bdbeff3-228d-4fbf-a2d9-e842af5e2c80" wsaVersion="NONE" name="ValidateOrderProcessBinding" type="wsdl" bindingName="{http://xmlns.oracle.com/Test1221App/ValidateOrderProcess/ValidateOrderProcess}ValidateOrderProcessBinding" soapVersion="1_1" anonymous="optional" definition="http://soalt06.flexagon:8001/soa-infra/services/order/ValidateOrderProcess/validateorderprocess_client_ep?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://soalt06.flexagon:8001/soa-infra/services/order/ValidateOrderProcess/validateorderprocess_client_ep?WSDL"><con:part><con:url>http://soalt06.flexagon:8001/soa-infra/services/order/ValidateOrderProcess/validateorderprocess_client_ep?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="ValidateOrderProcess" targetNamespace="http://xmlns.oracle.com/Test1221App/ValidateOrderProcess/ValidateOrderProcess" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:client="http://xmlns.oracle.com/Test1221App/ValidateOrderProcess/ValidateOrderProcess" xmlns:ns1="http://cm.charter.com/Enterprise/Order/V1" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>
+    <abstractWSDL>http://soalt06.flexagon:8001/soa-infra/services/order/ValidateOrderProcess!1.0/WSDLs/ValidateOrderProcess.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="ValidateOrderProcess">
+    <plnk:role name="ValidateOrderProcessProvider" portType="client:ValidateOrderProcess"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://cm.charter.com/Enterprise/Order/V1" schemaLocation="http://soalt06.flexagon:8001/soa-infra/services/order/ValidateOrderProcess/apps/Enterprise/Order/V1/xsd/Order.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="ValidateOrderProcessRequestMessage">
+    <wsdl:part name="payload" element="ns1:OrderRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ValidateOrderProcessResponseMessage">
+    <wsdl:part name="payload" element="ns1:OrderResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ValidateOrderProcess">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:ValidateOrderProcessRequestMessage"/>
+      <wsdl:output message="client:ValidateOrderProcessResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ValidateOrderProcessBinding" type="client:ValidateOrderProcess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation style="document" soapAction="process"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="validateorderprocess_client_ep">
+    <wsdl:port name="ValidateOrderProcess_pt" binding="client:ValidateOrderProcessBinding">
+      <soap:address location="http://soalt06.flexagon:8001/soa-infra/services/order/ValidateOrderProcess/validateorderprocess_client_ep"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://soalt06.flexagon:8001/soa-infra/services/order/ValidateOrderProcess/apps/Enterprise/Order/V1/xsd/Order.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://cm.charter.com/Enterprise/Order/V1" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:order="http://cm.charter.com/Enterprise/Order/V1">
+  <xsd:element name="Order" type="order:OrderType"/>
+  <xsd:element name="OrderRequest" type="order:OrderRequestType"/>
+  <xsd:element name="OrderResponse" type="order:OrderResponseType"/>
+  <xsd:complexType name="OrderRequestType">
+    <xsd:sequence>
+      <xsd:element ref="order:Order"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OrderResponseType">
+    <xsd:sequence>
+      <xsd:element name="Account" type="xsd:string"/>
+      <xsd:element name="Amount" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OrderType">
+    <xsd:sequence>
+      <xsd:element name="Account" type="xsd:string"/>
+      <xsd:element name="Number" type="xsd:string"/>
+      <xsd:element name="Item" type="xsd:string"/>
+      <xsd:element name="Quantity" type="xsd:string"/>
+      <xsd:element name="Price" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://soalt06.flexagon:8001/soa-infra/services/order/ValidateOrderProcess/validateorderprocess_client_ep</con:endpoint></con:endpoints><con:operation id="f4e302da-ddcf-49dc-b752-a0cd2dfe8474" isOneWay="false" action="process" name="process" bindingOperationName="process" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="af85ce20-4077-438c-b370-4dde3a3bb932" name="validateOrder"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soalt06.flexagon:8001/soa-infra/services/order/ValidateOrderProcess/validateorderprocess_client_ep</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://cm.charter.com/Enterprise/Order/V1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:OrderRequest>\r
+         <v1:Order>\r
+            <v1:Account>12</v1:Account>\r
+            <v1:Number>12</v1:Number>\r
+            <v1:Item>12</v1:Item>\r
+            <v1:Quantity>10</v1:Quantity>\r
+            <v1:Price>10</v1:Price>\r
+         </v1:Order>\r
+      </v1:OrderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="process"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="048c5177-1b2e-4e18-8dda-9435e055ab6d" name="OrderTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1437e900-a5b0-4e32-9917-433af60c20ec" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="OrderTestCase1" searchProperties="true"><con:settings/><con:testStep type="request" name="ValidateOrderAmount" id="95c68db6-ec6c-47c1-9532-2232a64320cf"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ValidateOrderProcessBinding</con:interface><con:operation>process</con:operation><con:request name="ValidateOrderAmount" id="cc5bb48f-e427-4f8a-a5cc-c076d97a390c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soalt06.flexagon:8001/soa-infra/services/order/ValidateOrderProcess/validateorderprocess_client_ep</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://cm.charter.com/Enterprise/Order/V1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:OrderRequest>\r
+         <v1:Order>\r
+            <v1:Account>12</v1:Account>\r
+            <v1:Number>12</v1:Number>\r
+            <v1:Item>12</v1:Item>\r
+            <v1:Quantity>10</v1:Quantity>\r
+            <v1:Price>10</v1:Price>\r
+         </v1:Order>\r
+      </v1:OrderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="65aee37d-259c-411a-a2ac-f4139c0867eb" name="SOAP Response"/><con:assertion type="XPath Match" id="adf01723-ad95-4cea-a617-30532edaf268" name="XPath Match"><con:configuration><path>declare namespace env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='http://cm.charter.com/Enterprise/Order/V1';
+declare namespace wsa='http://www.w3.org/2005/08/addressing';
+declare namespace instra='http://xmlns.oracle.com/sca/tracking/1.0';
+//ns1:Amount > 0</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
