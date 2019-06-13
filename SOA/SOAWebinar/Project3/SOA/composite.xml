@@ -25,7 +25,8 @@
   <property name="compositeID" type="xs:string" many="false">cf173443-f9be-4925-a6c3-27a68d425b20</property>
   <component name="BPELProcess1" version="1.1">
     <implementation.bpel src="BPEL/BPELProcess1.bpel"/>
-    <componentType>
+    <componentType xmlns="http://xmlns.oracle.com/sca/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns:ui="http://xmlns.oracle.com/soa/designer/">
       <service name="bpelprocess1_client" ui:wsdlLocation="WSDLs/BPELProcess1.wsdl">
         <interface.wsdl interface="http://xmlns.oracle.com/Test1221App/Project3/BPELProcess1#wsdl.interface(BPELProcess1)"
                         callbackInterface="http://xmlns.oracle.com/Test1221App/Project3/BPELProcess1#wsdl.interface(BPELProcess1Callback)"/>
