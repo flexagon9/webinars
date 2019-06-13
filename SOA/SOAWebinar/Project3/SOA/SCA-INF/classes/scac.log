@@ -1,0 +1,187 @@
+oracle.fabric.common.FabricException: oracle.mds.config.MDSConfigurationException: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+: oracle.mds.config.MDSConfigurationException: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+
+oracle.fabric.common.FabricException: oracle.fabric.common.FabricException: oracle.mds.config.MDSConfigurationException: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+: oracle.mds.config.MDSConfigurationException: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+
+	at oracle.fabric.common.FabricMetadataManagerFactory.createMetadataManager(FabricMetadataManagerFactory.java:195)
+	at oracle.fabric.common.FabricMetadataManagerFactory.createMetadataManager(FabricMetadataManagerFactory.java:161)
+	at oracle.fabric.composite.model.ModuleConfigModel.initializeMetadataManager(ModuleConfigModel.java:77)
+	at oracle.fabric.composite.model.CompositeModel.getClientMetadataManager(CompositeModel.java:281)
+	at oracle.soa.scac.ValidateComposite.loadComposite(ValidateComposite.java:898)
+	at oracle.soa.scac.ValidateComposite.doValidation(ValidateComposite.java:568)
+	at oracle.soa.scac.ValidateComposite.run0(ValidateComposite.java:228)
+	at oracle.soa.scac.ValidateComposite.run(ValidateComposite.java:209)
+	at oracle.soa.scac.ValidateComposite.main(ValidateComposite.java:201)
+Caused by: oracle.fabric.common.FabricException: oracle.mds.config.MDSConfigurationException: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+
+	at oracle.integration.platform.common.MDSMetadataManagerImpl.init(MDSMetadataManagerImpl.java:419)
+	at oracle.integration.platform.common.MDSMetadataManagerImpl.init(MDSMetadataManagerImpl.java:312)
+	at oracle.integration.platform.common.MDSMetadataManagerImpl.<init>(MDSMetadataManagerImpl.java:247)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at oracle.fabric.common.FabricMetadataManagerFactory.createMetadataManager(FabricMetadataManagerFactory.java:191)
+	... 8 more
+Caused by: oracle.mds.config.MDSConfigurationException: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+
+	at oracle.mds.config.PConfig.loadFromBean(PConfig.java:1107)
+	at oracle.mds.config.PConfig.<init>(PConfig.java:855)
+	at oracle.mds.config.MDSConfig.loadFromBean(MDSConfig.java:1263)
+	at oracle.mds.config.MDSConfig.loadFromElement(MDSConfig.java:1335)
+	at oracle.mds.config.MDSConfig.<init>(MDSConfig.java:987)
+	at oracle.mds.config.MDSConfig.<init>(MDSConfig.java:915)
+	at oracle.integration.platform.common.MDSUtil.getMDSConfig(MDSUtil.java:82)
+	at oracle.integration.platform.common.MDSUtil.getMDSInstance(MDSUtil.java:181)
+	at oracle.integration.platform.common.MDSMetadataManagerImpl.getMDSInstance(MDSMetadataManagerImpl.java:1001)
+	at oracle.integration.platform.common.MDSMetadataManagerImpl.init(MDSMetadataManagerImpl.java:374)
+	... 15 more
+Caused by: oracle.mds.exception.MDSExceptionList: MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+
+	at oracle.mds.config.PConfig.loadFromBean(PConfig.java:1101)
+	... 24 more
+Caused by: oracle.mds.config.MDSConfigurationException: MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+	at oracle.mds.config.PConfig.loadFromBean(PConfig.java:1041)
+	... 24 more
+Caused by: oracle.mds.exception.MDSException: MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+	at oracle.mds.persistence.MetadataStore.create(MetadataStore.java:355)
+	at oracle.mds.persistence.MetadataStore.create(MetadataStore.java:230)
+	at oracle.mds.persistence.MetadataStore.create(MetadataStore.java:199)
+	at oracle.mds.config.PConfig.getMetadataStore(PConfig.java:1971)
+	at oracle.mds.config.PConfig.getStoreForStoreUsage(PConfig.java:1915)
+	at oracle.mds.config.PConfig.loadFromBean(PConfig.java:1010)
+	... 24 more
+Caused by: oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+	at oracle.mds.internal.persistence.db.fcf.ConnectionManagerCallback.init(ConnectionManagerCallback.java:148)
+	at oracle.mds.internal.persistence.db.fcf.ConnectionManagerCallback.<init>(ConnectionManagerCallback.java:54)
+	at oracle.mds.persistence.stores.db.DBMetadataStore.checkRepositoryCompatibility(DBMetadataStore.java:1119)
+	at oracle.mds.persistence.stores.db.DBMetadataStore.checkCompatibility(DBMetadataStore.java:1493)
+	at oracle.mds.persistence.stores.db.DBMetadataStore.<init>(DBMetadataStore.java:407)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at oracle.mds.persistence.MetadataStore.create(MetadataStore.java:343)
+	... 29 more
+Caused by: java.sql.SQLRecoverableException: IO Error: Unknown host specified 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:800)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:789)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:33)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:608)
+	at oracle.jdbc.pool.OracleDataSource.getPhysicalConnection(OracleDataSource.java:443)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:324)
+	at oracle.ucp.jdbc.DataSourceConnectionFactoryAdapter.createConnection(DataSourceConnectionFactoryAdapter.java:96)
+	at oracle.ucp.jdbc.oracle.OracleDataSourceConnectionFactoryAdapter.createConnection(OracleDataSourceConnectionFactoryAdapter.java:82)
+	at oracle.ucp.common.Database.createPooledConnection(Database.java:268)
+	at oracle.ucp.common.Cluster.create(Cluster.java:236)
+	at oracle.ucp.common.Core.growBorrowed(Core.java:634)
+	at oracle.ucp.common.UniversalConnectionPoolImpl.borrowConnectionWithoutCountingRequests(UniversalConnectionPoolImpl.java:230)
+	at oracle.ucp.common.UniversalConnectionPoolImpl.borrowConnectionAndValidate(UniversalConnectionPoolImpl.java:139)
+	at oracle.ucp.common.UniversalConnectionPoolImpl.borrowConnection(UniversalConnectionPoolImpl.java:120)
+	at oracle.ucp.jdbc.JDBCConnectionPool.borrowConnection(JDBCConnectionPool.java:170)
+	at oracle.ucp.jdbc.oracle.OracleJDBCConnectionPool.borrowConnection(OracleJDBCConnectionPool.java:849)
+	at oracle.ucp.jdbc.oracle.OracleConnectionConnectionPool.borrowConnection(OracleConnectionConnectionPool.java:82)
+	at oracle.ucp.jdbc.PoolDataSourceImpl.getConnection(PoolDataSourceImpl.java:1103)
+	at oracle.ucp.jdbc.PoolDataSourceImpl.getConnection(PoolDataSourceImpl.java:1031)
+	at oracle.ucp.jdbc.PoolDataSourceImpl.getConnection(PoolDataSourceImpl.java:1006)
+	at oracle.mds.internal.persistence.db.JDBCConnectionManagerImpl.fetchConnection(JDBCConnectionManagerImpl.java:485)
+	at oracle.mds.internal.persistence.db.ConnectionManager.getConnection(ConnectionManager.java:454)
+	at oracle.mds.internal.persistence.db.fcf.ConnectionManagerCallback.init(ConnectionManagerCallback.java:120)
+	... 38 more
+Caused by: oracle.net.ns.NetException: Unknown host specified 
+	at oracle.net.resolver.HostnameNamingAdapter.resolve(HostnameNamingAdapter.java:208)
+	at oracle.net.resolver.NameResolver.resolveName(NameResolver.java:132)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:539)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:620)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:239)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1606)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:539)
+	... 60 more
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=32m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0

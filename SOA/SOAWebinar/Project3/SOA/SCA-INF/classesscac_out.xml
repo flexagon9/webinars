@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Faults>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>C:\prod\workspaces\mywork-1221-soa\mywork\Test1221App\Project3\SOA\composite.xml</file>
+      <name>C:\prod\workspaces\mywork-1221-soa\mywork\Test1221App\Project3\SOA\composite.xml</name>
+      <fix/>
+      <msg>oracle.fabric.common.FabricException: oracle.mds.config.MDSConfigurationException: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+: oracle.mds.config.MDSConfigurationException: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+: MDS-01330: unable to load MDS configuration document    
+MDS-01329: unable to load element "persistence-config"
+MDS-01370: MetadataStore configuration for metadata-store-usage "mstore-usage_1" is invalid.    
+MDS-01259: The metadata store "oracle.mds.persistence.stores.db.DBMetadataStore" cannot be instantiated.    
+oracle.mds.exception.MDSRuntimeException: MDS-00003: error connecting to the database    
+java.sql.SQLRecoverableException: IO Error: Unknown host specified     
+oracle.net.ns.NetException: Unknown host specified 
+</msg>
+   </Fault>
+</Faults>
